@@ -91,10 +91,12 @@ $(function() {
         var initialState,
             finalState;
 
+        beforeEach(function(done) {
+            loadFeed(0, done);
+        });
 
         beforeEach(function(done) {
             initialState = $('.entry-link h2:first').text();
-            console.log(initialState);
             loadFeed(1, done);
         });
 
